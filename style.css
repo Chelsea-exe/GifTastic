@@ -1,0 +1,49 @@
+#woman-input {
+    border-style: solid;
+    border-color: peachpuff;
+    border-radius: 4px;
+    background-color: darkmagenta;
+    color: aliceblue;
+    width: 400px;
+    height: 30px;
+}
+
+#add-woman {
+    background-color: violet;
+    color: white;
+    float: right;
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 400px;
+    height: 30px;
+}
+#woman {
+float: right;
+padding-right: -10%;
+}
+button {
+    border-radius: 4px;
+    background-color: mediumvioletred;
+    padding: 3px;
+    margin: 5px;
+    color: white;
+}
+body {
+    background-image: url(./assets/abstract-blue-multicolor-purple-shapes-vector-white-background-wallpaper.jpg);
+
+}
+h1 {
+    font-family: 'Playfair Display SC', serif;
+    color: white;
+    text-shadow: 3px 2px black;
+    font-size: 64px;
+}
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: rgb(255, 196, 0);
+    font-size: 36px;
+    float: right;
+
+}
