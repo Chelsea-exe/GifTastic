@@ -1,6 +1,4 @@
-$(document).ready(); {6+
-    console.log("page is loaded!");
-    var women = ["Beyonce", "Michelle Obama", "Rihanna", "Alexandria Ocasio-Cortez"];
+var women = ["Beyonce", "Michelle Obama", "Rihanna", "Alexandria Ocasio-Cortez"];
 
 function renderButtons() {
     $('#display-buttons').empty();
@@ -8,7 +6,7 @@ function renderButtons() {
         
         var w = $("<button>");
 
-        w.addClass("powerfulWoman");
+        w.addClass("women");
 
         w.attr("data-name", women[i]);
 
@@ -28,10 +26,10 @@ $("#add-woman").on("click", function(event) {
 });
 renderButtons();
 $("button").on("click", function() {
-    var person = $(person).attr("data-person");
+    var women = $(this).attr("data-name");
 
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        person + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+        women + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -41,19 +39,19 @@ $("button").on("click", function() {
         
         var results = response.data;
 
-        for (var a = 0; a < results.length; a++) {
+        for (var i = 0; i < results.length; i++) {
 
-            if (results[a].rating !== "r" && results[a].rating !== "pg-13") {
+            if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
 
                 var gif = $("<div>");
 
-                var rating = results[a].rating;
+                var rating = results[i].rating;
 
                 var p = $("<p>").text("Rating: " + rating);
 
                 var image = $("<img>");
 
-                image.attr("src", results[a].images.fixed_height.url);
+                image.attr("src", results[i].images.fixed_height.url);
 
                 gif.append(p);
                 gif.append(image);
@@ -63,4 +61,3 @@ $("button").on("click", function() {
         }
     })
 })
-}
