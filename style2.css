@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.26)), url(./assets/Artboard\ 1.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.164), rgba(0, 0, 0, 0.164)), url(./assets/Artboard\ 1.png);
     background-repeat: repeat;
     background-size: 80vh;
 }
@@ -68,7 +68,8 @@ h3 {
 }
 
 label {
-    color: white;
+    color: black;
+    font-weight: bold;
 }
 #woman-input {
     border-radius: 4px;
