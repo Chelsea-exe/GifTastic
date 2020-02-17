@@ -125,9 +125,18 @@ function renderButtons() {
     }
 }
 
-$("#add-woman").on("click", function(event) {
-    event.preventDefault();
+$("#add-woman").on("click", function() {
+    var input = $("#woman-input").val().trim();
+        if(input === "") {
+            alert("add a woman please!");
+            console.log("add her button was pushed!");
+        }
     
+})
+
+$("#add-woman").on("click", function(event) {
+
+    event.preventDefault();
     var powerful = $("#woman-input").val().trim();
     women.push(powerful);
 
@@ -178,4 +187,17 @@ $(document).on("click",".women", function(data) {
             }
         }
     })
+    // $("#add-woman").on("click", function() {
+    //     var field = $("#woman-input")
+    //     if(field === "") {
+    //         alert("add a woman please!");
+    //         console.log("add her button was pushed!");
+    //     }
+    // })
+    // $(".women").on("click", function() {
+    //   var data = $(this).attr("data-name");
+    //   if (data === "still") {
+    //       $(this).attr("src")
+    //   }
+    // })
 })
